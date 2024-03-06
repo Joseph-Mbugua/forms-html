@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+@media (max-width: 600px) {
+    .registration-form input[type="text"], .registration-form input[type="email"], .registration-form input[type="password"] {
+      width: 100%;
+    }
+  }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: transparent;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button.reset {
+            background-color: #dc3545;
+        }
+        legend{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <fieldset> <legend>
+    <h2 style="text-align: center;">Student Registration Form</h2>
+  </legend>
+    <form action="" method="post">
+        <fieldset> <legend>Personal information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+        <textarea name="bio" id="bio" cols="60" rows="5" placeholder="Enter Your Bio"></textarea>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        </fieldset>
+        <br>
+      <fieldset>
+        <legend>Gender</legend>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Contact Information</legend>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="telephone">Telephone:</label>
+        <input type="tel" id="telephone" name="telephone" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend> <label for="course">Course:</label>
+        </legend>
+        <select id="course" name="course" required>
+            <option value="">Select Course</option>
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Python Programming">Python Programming</option>
+        </select>
+      </fieldset>
+      <br>
+      <fieldset aria-required="true"> <legend>Mode of class</legend>
+        <label for="physical">Physical class</label>
+        <input type="checkbox" id="physical" name="physical">
+        <label for="online">Online class:</label>
+        <input type="checkbox" id="online" name="online">
+
+        </fieldset>
+
+<br>
+<br>
+        <label for="profile_picture">Profile picture:</label>
+        <input type="file" id="profile_picture" name="profile_picture" accept="images/*">
+<br>
+<br>
+       <div>
+        <button type="submit">Register</button>
+        <button type="reset" class="reset">Clear Form</button>
+       </div>
+    </form>
+  </fieldset>
+</body>
+</html>
